@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SlidesAndText = ({ title, description, slides, reverse, className, settings }) => {
+const SlidesAndText = ({ title, description, slides, reverse, className, settings, additionalComponent }) => {
     const defaultSettings = {
         dots: true,
         infinite: true,
@@ -27,6 +27,8 @@ const SlidesAndText = ({ title, description, slides, reverse, className, setting
                 {/* Event Info */}
                 <div className="mt-2">
                     {description}
+                    <br />
+                    {additionalComponent}
                 </div>
             </div>
 
