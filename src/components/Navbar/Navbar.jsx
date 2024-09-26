@@ -9,9 +9,11 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navbarItems = [
-        { id: 1, title: "IFCE 2025", route: "/" },
+        { id: 1, title: "Home", route: "/" },
         // { id: 2, title: "About", route: "/about" },
-        { id: 3, title: "Contact", route: "/contact" },
+        { id: 3, title: "IFCE 2025", route: "/ifce" },
+        // { id: 4, title: "Board Members", route: "/board-members" },
+        { id: 5, title: "Contact", route: "/contact" },
     ];
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
@@ -29,7 +31,7 @@ function Navbar() {
             <ul className='hidden md:flex'>
                 {navbarItems.map((navItem) => (
                     <li
-                        className='mx-16 text-[1.4rem] roboto-black hover:text-lightGray duration-300'
+                        className='mx-8 text-[1.4rem] roboto-black hover:text-lightGray duration-300'
                         key={navItem.id}>
                         <NavLink to={navItem.route}>
                             {navItem.title}

@@ -3,8 +3,8 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SlidesAndText = ({ title, description, slides, reverse,className }) => {
-    const settings = {
+const SlidesAndText = ({ title, description, slides, reverse, className, settings }) => {
+    const defaultSettings = {
         dots: true,
         infinite: true,
         speed: 1000,
@@ -14,7 +14,7 @@ const SlidesAndText = ({ title, description, slides, reverse,className }) => {
         autoplaySpeed: 3000,
         arrows: true,
     };
-
+    const sliderSettings = { ...defaultSettings, ...settings };
     return (
         <div className={`container mx-auto px-4 md:flex ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} ${className}`}>
             {/* Text Section */}
@@ -25,27 +25,27 @@ const SlidesAndText = ({ title, description, slides, reverse,className }) => {
                 </h2>
 
                 {/* Event Info */}
-                <p className="mt-2">
+                <div className="mt-2">
                     {description}
-                </p>
+                </div>
             </div>
 
             {/* Slider Section */}
             <div className="md:w-1/2">
-                <Slider {...settings}>
-                    {slides.map((slide, index) => (
-                        <div key={index} className="w-full">
-                            <img
-                                loading="lazy"
-                                src={slide.image}
-                                alt={slide.alt}
-                                className="w-full h-auto object-cover rounded-xl"
-                            />
-                        </div>
-                    ))}
-                </Slider>
-            </div>
+                <Slider  {...sliderSettings}>
+                {slides.map((slide, index) => (
+                    <div key={index} className="w-full">
+                        <img
+                            loading="lazy"
+                            src={slide.image}
+                            alt={slide.alt}
+                            className="w-full h-auto object-cover rounded-xl"
+                        />
+                    </div>
+                ))}
+            </Slider>
         </div>
+        </div >
 
     );
 };
