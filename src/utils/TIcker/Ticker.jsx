@@ -6,7 +6,7 @@ function Ticker({ title, array }) {
         <>
 
             <div className="bg-white py-10 md:my-16">
-                <h2 className="text-orange text-3xl md:text-6xl font-bold text-center">
+                <h2 className="text-[#e16a39fd] text-3xl md:text-6xl font-bold text-center">
                     {title}
                 </h2>
                 <div className="overflow-hidden w-full mt-12">
