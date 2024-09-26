@@ -32,7 +32,7 @@ const newsData = [
     title: "Technical Session by Çukurova Kimya Endüstrisi A.Ş",
     date: "11th December, 2023",
     description: "Çukurova Kimya organized a technical session at Pearl Continental Hotel, Lahore. More than 60 Foundries attended this session. Çukurova Kimya's technical team provided guidance on using Coatings, various Phenolic Resins, and Exothermic Feeder Sleeves. They also addressed multiple queries and problems faced by foundries.",
-    images: [image2, image4, image5]
+    images: [image4]
   },
   {
     title: "Meeting with Canadian Trade Commissioner",
@@ -68,13 +68,13 @@ const newsData = [
     title: "5th Business Development Session with Pioneer Cement",
     date: "27th June, 2024",
     description: "PFA hosted a session with Pioneer Cement, focusing on reducing imports and boosting local manufacturing, marking a significant leap forward for the foundry sector.",
-    images: [image14, image15]
+    images: [image14]
   },
   {
     title: "Meeting with Managing Director of Peoples Steel Mills Limited",
     date: "27th July, 2024",
     description: "Mr. Syed Sajid Hussain, Managing Director of Peoples Steel Mills, provided a briefing on world-class technology and molten metal treatment. His insights on advanced practices and opportunities for collaboration were invaluable.",
-    images: [image16, image17, image18]
+    images: [image16,]
   }
 ];
 

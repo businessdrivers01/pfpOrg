@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SlidesAndText } from '../../../utils';
+import { AnimatedTextSlides } from '../../../utils';
 import slide1 from '../../../assets/Introduction/slide1.jpg';
 import slide2 from '../../../assets/Introduction/slide2.jpg';
 import slide3 from '../../../assets/Introduction/slide3.jpg';
@@ -70,8 +70,8 @@ const Introduction = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-4xl font-bold text-darkGray mb-8 text-center">Introduction</h1>
-                    <p className="text-darkGray text-lg mb-12 text-center max-w-3xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold text-orange mb-8 text-center">Introduction</h1>
+                    <p className="text-darkGray text-lg md:text-xl mb-12 max-w-3xl mx-auto">
                         Welcome to the Pakistan Foundry Association (PFA), the leading organization actively representing and promoting the foundry industry in Pakistan. Established with the mission to support innovation, collaboration, and growth through cluster development, PFA serves as a central hub for foundries, suppliers, and stakeholders across the nation. We are committed to advancing the capabilities of Pakistan's foundry sector by fostering technological advancements, enhancing workforce skills, and facilitating access to new markets. Join us in shaping the future of this dynamic industry and driving sustainable development in Pakistan's manufacturing landscape.
                     </p>
                 </motion.div>
@@ -81,8 +81,8 @@ const Introduction = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    <h2 className="text-3xl font-bold text-orange mb-8 text-center">Board of Directors</h2>
-                    <SlidesAndText
+                    <h2 className="text-4xl md:text-5xl font-bold text-orange mb-8 text-center">Board of Directors</h2>
+                    <AnimatedTextSlides
                         title={
                             <AnimatePresence mode="wait">
                                 <motion.span
@@ -110,7 +110,7 @@ const Introduction = () => {
                             </AnimatePresence>
                         }
                         slides={slides}
-                        className="mb-12"
+                        className="mt-20"
                         reverse={false}
                         settings={{
                             beforeChange: handleBeforeChange,
