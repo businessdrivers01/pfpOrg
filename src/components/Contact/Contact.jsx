@@ -70,7 +70,7 @@ function Contact() {
                 id="email"
                 type="email"
                 name="email"
-                className="w-full px-3 py-2 text-darkGray bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
+                className="w-full px-3 py-2 text-orange outline-none bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
                 required
               />
               <ValidationError prefix="Email" field="email" errors={state.errors} />
