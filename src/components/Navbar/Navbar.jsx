@@ -9,11 +9,11 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navbarItems = [
-        { id: 1, title: "Home", route: "/" },
-        // { id: 2, title: "About", route: "/about" },
-        { id: 3, title: "IFCE 2025", route: "/ifce" },
-        // { id: 4, title: "Board Members", route: "/board-members" },
-        { id: 5, title: "Contact", route: "/contact" },
+        { id: 1, title: "IFCE 2025", route: "/" },
+        { id: 2, title: "Home", route: "/home" },
+        { id: 3, title: "Board Members", route: "/board-members" },
+        { id: 4, title: "Contact", route: "/contact" },
+        { id: 5, title: "Book a Stall", route: "/book-stall" },
     ];
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
@@ -30,10 +30,15 @@ function Navbar() {
             {/* Desktop Right Section */}
             <ul className='hidden md:flex'>
                 {navbarItems.map((navItem) => (
-                    <li
-                        className='mx-8 text-[1.4rem] roboto-black hover:text-lightGray duration-300'
-                        key={navItem.id}>
-                        <NavLink to={navItem.route}>
+                    <li key={navItem.id} className="mx-8">
+                        <NavLink
+                            to={navItem.route}
+                            className={({ isActive }) =>
+                                `text-[1.4rem] roboto-black duration-300 hover:text-orange 
+                     ${isActive ? 'text-orange' : 'text-lightGray'
+                                }`
+                            }
+                        >
                             {navItem.title}
                         </NavLink>
                     </li>
@@ -57,7 +62,7 @@ function Navbar() {
                         initial={{ height: 0 }}
                         animate={{ height: "auto" }}
                         exit={{ height: 0 }}
-                        className="absolute top-[95px] left-0 w-full bg-darkGray text-orange roboto-black z-10"
+                        className="absolute top-[92px] left-0 w-full bg-darkGray text-orange roboto-black z-10"
                     >
                         <ul className='flex flex-col items-center py-4'>
                             {navbarItems.map((navItem) => (

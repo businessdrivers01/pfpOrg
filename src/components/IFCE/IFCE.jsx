@@ -8,6 +8,7 @@ import banner2 from "../../assets/banners/banner2.jpg"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { animationSettings } from '../../constants';
 
 function IFCE() {
 
@@ -38,9 +39,7 @@ function IFCE() {
   return (
     <main className='overflow-x-hidden'>
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+       {...animationSettings}
         className="">
 
 

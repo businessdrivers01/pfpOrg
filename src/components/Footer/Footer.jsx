@@ -78,13 +78,22 @@ export default function Footer() {
           </div>
         </div>
 
-      
+
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-sm text-lightGray">
-            © {new Date().getFullYear()} IFCE. All rights reserved.
+        <div className="mt-8 pt-8 flex-col md:flex-row  flex md:justify-between items-center">
+          <a
+            href="https://businessdrivers01.com"
+            className="text-base font-bold text-orange hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Made with <span className='text-red-300 text-lg'>❤</span> by Business Drivers
+          </a>
+          <p className="text-sm text-lightGray mt-4 md:mt-0">
+            © {new Date().getFullYear()} PFA. All rights reserved.
           </p>
         </div>
+
       </div>
     </footer>
   )
