@@ -11,7 +11,7 @@ function Navbar() {
     const navbarItems = [
         { id: 1, title: "IFCE 2025", route: "/" },
         { id: 2, title: "Home", route: "/home" },
-        { id: 3, title: "Board Members", route: "/board-members" },
+        { id: 3, title: "Members", route: "/board-members" },
         { id: 4, title: "Contact", route: "/contact" },
         { id: 5, title: "Book a Stall", route: "/book-stall" },
     ];
