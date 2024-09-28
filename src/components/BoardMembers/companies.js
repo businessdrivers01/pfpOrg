@@ -49,18 +49,19 @@ const companies = [
     { companyName: "RAZA BROTHERS", city: "Gujranwala", castingMaterial: "Cast Iron, Mild Steel", phone: "Not specified" },
     { companyName: "Safco", city: "Lahore", castingMaterial: "Cast Iron, Carbon Steel", phone: "042-36311400, 36304291" },
     { companyName: "Shahsons Pakistan (Pvt) Ltd", city: "Multan", castingMaterial: "Cast Iron, Mild Steel", phone: "0302-6789000" },
-    { companyName: "Shahzad Re-Rolling Steel Industry", city: "Gujranwala", castingMaterial: "Cast Iron", phone: "Not specified" },
-    { companyName: "Steelex Industry (Pvt.) Ltd", city: "Lahore", castingMaterial: "Cast Iron, Steel", phone: "042-36547556-7" },
-    { companyName: "Super Foundry", city: "Lahore", castingMaterial: "Cast Iron", phone: "0301-8471427" },
-    { companyName: "Tariq Steel Industries (Pvt.) Ltd.", city: "Lahore", castingMaterial: "Cast Iron", phone: "0321-8873270" },
-    { companyName: "Tariq Tools Ltd.", city: "Lahore", castingMaterial: "Cast Iron", phone: "+92-42-37512393, 35400427" },
-    { companyName: "THREE STARS STEEL FOUNDRY", city: "Gujranwala", castingMaterial: "Mild Steel, Cast Iron", phone: "0334-3335883" },
-    { companyName: "TUF PACIFIC", city: "Sheikhupura", castingMaterial: "Cast Iron", phone: "042-37920188, 37920286" },
-    { companyName: "Union Engineering Works", city: "Lahore", castingMaterial: "Cast Iron", phone: "+92-42-36287940, 37723125" },
-    { companyName: "United Eng. Foundry", city: "Lahore", castingMaterial: "Cast Iron", phone: "0322-4488005" },
-    { companyName: "Waheed Engineering", city: "Gujranwala", castingMaterial: "Cast Iron", phone: "0331-7295515" },
-    { companyName: "WAK Engineering", city: "Lahore", castingMaterial: "Cast Iron", phone: "+92-42-35713298" },
-    { companyName: "Zafar Iqbal Foundry", city: "Gujranwala", castingMaterial: "Cast Iron", phone: "Not specified" }
+
+    { companyName: "Shajarpak (PVT) LTD", city: "Lahore", castingMaterial: "Cast Iron", phone: "042-36285140-5" },
+    { companyName: "Steel Casting (Pvt) Ltd.", city: "Gujranwala", castingMaterial: "Cast Iron, SS, Manganese Steel, Alloys", phone: "0323-3100000" },
+    { companyName: "Suleman Machinery Company (Pvt.) Ltd", city: "Gujranwala", castingMaterial: "", phone: "0300-9459041" },
+    { companyName: "Supra Steels", city: "Gujranwala", castingMaterial: "Cast Iron, SS, Manganese Steel, Alloys", phone: "0300-8740098" },
+    { companyName: "Utopia Industries Pvt. Ltd", city: "Karachi", castingMaterial: "Cast Iron", phone: "" },
+    { companyName: "Waqar Usman Auto Engineering", city: "Lahore", castingMaterial: "Cast Iron", phone: "0312-4836465" },
+    { companyName: "West Industrial Concern", city: "Lahore", castingMaterial: "Cast Iron, Carbon Steel", phone: "0301-8662993" },
+    { companyName: "Zahoor Steel Casting", city: "Lahore", castingMaterial: "Cast Iron, SS, Manganese Steel", phone: "0321-9449077" },
+    { companyName: "Zaid Products (Pvt) Ltd.", city: "Lahore", castingMaterial: "Cast Iron", phone: "042-37612242" }
+
+
+
 ];
 
 

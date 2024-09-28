@@ -5,7 +5,10 @@ import MyButton from '../../utils/MyButton/MyButton'
 import stallsLayout from "../../assets/BookStall/stalls-layout.jpg"
 
 export default function BookStall() {
-  // const pdfUrl = pdfFile;
+  const [isLayoutOpen, setIsLayoutOpen] = useState(false)
+  const handleLayoutOpen = () => {
+    setIsLayoutOpen(!isLayoutOpen)
+  }
 
   const [formData, setFormData] = useState({
     companyName: '',
@@ -218,12 +221,28 @@ export default function BookStall() {
         </div>
       </div>
 
+      {isLayoutOpen ? (
+        <>
+          <img
+            className='w-full md:w-[80vw] my-4 md:px-4 mx-auto'
+            src={stallsLayout} alt="Stalls Layout" />
+          <div className="flex justify-center">
+            <MyButton
+              onClick={handleLayoutOpen}
+              children='Hide Stall Layout Plan'
+              className={"my-4 hover:scale-105 duration-300"} />
+          </div>
+        </>
+      ) : (
+        <div className="flex justify-center">
+          <MyButton
+            onClick={handleLayoutOpen}
+            children='View Stall Layout Plan'
+            className={"my-4 hover:scale-105 duration-300"} />
+        </div>)}
 
-      <img 
-      className='w-full md:w-[80vw] my-4 md:px-4 mx-auto'
-      src={stallsLayout} alt="Stalls Layout" />
 
-     
+
 
 
     </motion.div>
