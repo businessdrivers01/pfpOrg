@@ -1,8 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MyButton } from '../../utils';
-import { Benefits, IFCE2025, KeyPoints, OurHistory } from ".."
+import { Benefits, ElementsOfIFCE, IFCE2025, KeyPoints, ObjectiveOfIFCE, OurHistory } from ".."
 import banner1 from "../../assets/banners/banner1.jpg"
 import banner2 from "../../assets/banners/banner2.jpg"
 import Slider from 'react-slick';
@@ -39,7 +37,7 @@ function IFCE() {
   return (
     <main className='overflow-x-hidden'>
       <motion.div
-       {...animationSettings}
+        {...animationSettings}
         className="">
 
 
@@ -47,8 +45,7 @@ function IFCE() {
         <Slider  {...defaultSettings}>
           {slides.map((slide, index) => (
             <div
-            className=''
-            key={index} >
+              key={index} >
               <img
                 loading="lazy"
                 src={slide.image}
@@ -58,6 +55,8 @@ function IFCE() {
             </div>
           ))}
         </Slider>
+        <ElementsOfIFCE />
+        <ObjectiveOfIFCE />
         <IFCE2025 />
         <OurHistory />
         <KeyPoints />

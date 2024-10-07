@@ -25,7 +25,7 @@ const SlidesAndText = ({ title, description, slides, reverse, className, setting
                 </h2>
 
                 {/* Event Info */}
-                <div className="mt-2">
+                <div>
                     {description}
                     <br />
                     {additionalComponent}
@@ -35,18 +35,18 @@ const SlidesAndText = ({ title, description, slides, reverse, className, setting
             {/* Slider Section */}
             <div className="md:w-1/2">
                 <Slider  {...sliderSettings}>
-                {slides.map((slide, index) => (
-                    <div key={index} className="w-full">
-                        <img
-                            loading="lazy"
-                            src={slide.image}
-                            alt={slide.alt}
-                            className="w-full h-auto object-cover rounded-xl"
-                        />
-                    </div>
-                ))}
-            </Slider>
-        </div>
+                    {slides.map((slide, index) => (
+                        <div key={index} className="w-full">
+                            <img
+                                loading="lazy"
+                                src={slide.image}
+                                alt={slide.alt}
+                                className="w-full h-auto object-cover rounded-xl"
+                            />
+                        </div>
+                    ))}
+                </Slider>
+            </div>
         </div >
 
     );

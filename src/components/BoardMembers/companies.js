@@ -49,7 +49,6 @@ const companies = [
     { companyName: "RAZA BROTHERS", city: "Gujranwala", castingMaterial: "Cast Iron, Mild Steel", phone: "Not specified" },
     { companyName: "Safco", city: "Lahore", castingMaterial: "Cast Iron, Carbon Steel", phone: "042-36311400, 36304291" },
     { companyName: "Shahsons Pakistan (Pvt) Ltd", city: "Multan", castingMaterial: "Cast Iron, Mild Steel", phone: "0302-6789000" },
-
     { companyName: "Shajarpak (PVT) LTD", city: "Lahore", castingMaterial: "Cast Iron", phone: "042-36285140-5" },
     { companyName: "Steel Casting (Pvt) Ltd.", city: "Gujranwala", castingMaterial: "Cast Iron, SS, Manganese Steel, Alloys", phone: "0323-3100000" },
     { companyName: "Suleman Machinery Company (Pvt.) Ltd", city: "Gujranwala", castingMaterial: "", phone: "0300-9459041" },

@@ -1,6 +1,6 @@
 import React from 'react';
 import SlidesAndText from '../../../utils/SlidesAndText/SlidesAndText';
-
+import { motion } from 'framer-motion';
 // Example images for the slides
 import keyPointSlide1 from '../../../assets/KeyPoints/slide1.jpg';
 import keyPointSlide2 from '../../../assets/KeyPoints/slide2.jpg';
@@ -40,15 +40,21 @@ const mainPoints = [
 
 const MainPoints = () => {
     return (
-        <ul>
-            {mainPoints.map((point) => (
-                <li key={point.id}
-                    className="text-base text-white bg-darkGray font-semibold mb-4 py-2 px-16 flex justify-start rounded-xl hover:scale-105 duration-500  cursor-pointer">
-                    <p className='text-orange'>{point.icon}</p>
-                    <p className='ml-4'>{point.key}</p>
-                </li>
-            ))}
-        </ul>
+    
+            <ul className="space-y-4">
+                {mainPoints.map((point) => (
+                    <motion.li
+                        key={point.id}
+                        className="flex items-center bg-lightGray rounded-lg  p-2 md:px-4 transition-all duration-300 cursor-pointer"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        <div className="text-orange text-2xl mr-4 flex-shrink-0">{point.icon}</div>
+                        <p className="text-darkGray text-lg font-semibold">{point.key}</p>
+                    </motion.li>
+                ))}
+            </ul>
+        
     )
 }
 
@@ -85,8 +91,8 @@ function KeyPoints() {
                 className="md:my-32 my-16"
                 title="IFCE 2025 Key Points"
                 description={
-                    `IFCE2025 is poised to be a groundbreaking event that will bring together the global foundry community to share knowledge, showcase innovations, and drive progress. The event will feature a comprehensive conference program with keynote sessions, technical presentations, and panel discussions, focusing on the latest trends, technologies, and best practices in the foundry industry. Additionally, the exhibition will showcase the latest products, services, and solutions from leading companies and startups, providing attendees with a unique opportunity to explore new technologies and innovations.`
-                        .split('\n')
+                    // `IFCE2025 is poised to be a groundbreaking event that will bring together the global foundry community to share knowledge, showcase innovations, and drive progress. The event will feature a comprehensive conference program with keynote sessions, technical presentations, and panel discussions, focusing on the latest trends, technologies, and best practices in the foundry industry. Additionally, the exhibition will showcase the latest products, services, and solutions from leading companies and startups, providing attendees with a unique opportunity to explore new technologies and innovations.`
+                    "".split('\n')
                         .map((line, index) => (
                             <span key={index}>
                                 {line}

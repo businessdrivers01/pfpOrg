@@ -62,7 +62,7 @@ function Benefits() {
             <NavLink to="/book-stall">
                 <div className="flex justify-center my-8">
                     <MyButton
-                        className="md:px-8 py-4 text-xl font-bold" type='submit' children='Book Your Stall Now' />
+                        className="md:px-8 py-4 text-xl font-bold" type='button' children='Book Your Stall Now' />
                 </div>
             </NavLink>
         </div>

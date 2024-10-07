@@ -13,6 +13,8 @@ import BoardMembers from "./BoardMembers/BoardMembers.jsx"
 import EventsAndConferences from "./Home/HomeMisc/EventsAndConferences.jsx"
 import NewsAndActivities from "./Home/HomeMisc/NewsAndActivities.jsx"
 import BookStall from "./BookStall/BookStall.jsx"
+import ElementsOfIFCE from "./IFCE/IFCEMisc/ElementsOfIFCE.jsx"
+import ObjectiveOfIFCE from "./IFCE/IFCEMisc/ObjectiveOfIFCE.jsx"
 
 
 
@@ -32,5 +34,7 @@ export {
     BoardMembers,
     EventsAndConferences,
     NewsAndActivities,
-    BookStall
+    BookStall,
+    ElementsOfIFCE,
+    ObjectiveOfIFCE
 }
