@@ -41,7 +41,7 @@ function OurHistory() {
     return (
         <SlidesAndText
             className="md:my-32"
-            title="OUR HISTORY"
+            title="History Of IFCE2025"
             description={`The International Foundry Conference and Exhibition (IFCE), established in 2006, has grown into a major global event for the foundry industry. Over the years, it has become a key platform for knowledge sharing, innovation, and collaboration, attracting industry leaders and experts from around the world. The event has continuously evolved, addressing the changing trends and needs of the foundry sector, including technological advancements and sustainability.
 
 As the event prepares for its ninth edition in 2025, IFCE2025 promises to be even more impactful, with a focus on innovation, education, and networking. Building on the success of previous editions, it will bring together the global foundry community to share knowledge, showcase new developments, and shape the future of the industry. IFCE2025 is set to be a landmark event for the foundry sector, driving progress and fostering collaboration.`

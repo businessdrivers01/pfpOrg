@@ -1,30 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, CalendarArrowDownIcon, Users, Lightbulb } from 'lucide-react';
+import { Target, CalendarArrowDownIcon, Users, Lightbulb, BookCheck } from 'lucide-react';
 import { MyButton } from '../../../utils';
 import { NavLink } from 'react-router-dom';
 
 const objectives = [
   {
     icon: Target,
-    title: "Our Mission",
-    description: "Founded 18 years ago, IFCE was established with the mission of transforming and advancing local foundries.",
+    description: "Promote and support the growth and development of local foundries in Pakistan.",
   },
   {
     icon: CalendarArrowDownIcon,
-    title: "IFCE 2025",
-    description: "We are excited to announce the 9th edition of IFCE 2025, a premier event dedicated to local industries and showcasing the potential of local foundries to meet industrial needs.",
+    description: "Provide a platform for local foundries to showcase their capabilities, products, and services.",
   },
   {
     icon: Users,
-    title: "Invitation",
-    description: "We extend a warm invitation to all leading tech suppliers to join us in fostering progress and driving the future of the foundry industry.",
+    description: "Address the challenges and issues faced by local foundries and identify solutions to overcome them.",
+  },
+  {
+    icon: BookCheck, 
+    description: "Share knowledge and best practices in foundry operations, technology, and management to enhance the competitiveness of local foundries.",
   },
 ];
 
+
 const ObjectiveOfIFCE = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           className="text-3xl md:text-5xl font-bold text-orange text-center mb-8"
@@ -35,7 +37,7 @@ const ObjectiveOfIFCE = () => {
           Objectives of IFCE
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {objectives.map((objective, index) => (
             <motion.div
               key={index}
@@ -47,8 +49,7 @@ const ObjectiveOfIFCE = () => {
               <div className="bg-orange rounded-full p-4 mb-4">
                 <objective.icon className="w-8 h-8 text-gray-100" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-darkGray mb-2">{objective.title}</h3>
-              <p className="text-darkGray text-base">{objective.description}</p>
+              <p className="text-left text-darkGray text-base">{objective.description}</p>
             </motion.div>
           ))}
         </div>

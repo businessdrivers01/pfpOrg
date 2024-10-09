@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { Benefits, ElementsOfIFCE, IFCE2025, KeyPoints, ObjectiveOfIFCE, OurHistory } from ".."
 import banner1 from "../../assets/banners/banner1.jpg"
 import banner2 from "../../assets/banners/banner2.jpg"
+import banner3 from "../../assets/banners/banner3.jpg"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { animationSettings } from '../../constants';
+import StatsRepresentation from './IFCEMisc/StatsRepresentation';
 
 function IFCE() {
 
@@ -30,6 +32,10 @@ function IFCE() {
     {
       image: banner2,
       alt: 'Image 2',
+    },
+    {
+      image: banner3,
+      alt: 'Image 3',
     },
 
   ]
@@ -56,6 +62,7 @@ function IFCE() {
           ))}
         </Slider>
         <ElementsOfIFCE />
+        <StatsRepresentation/>
         <ObjectiveOfIFCE />
         <IFCE2025 />
         <OurHistory />

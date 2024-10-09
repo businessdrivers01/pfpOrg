@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Building, Phone, MapPin, Hammer } from 'lucide-react';
-import { companiesWithId } from './companies.js';
+import { associateMembersWithId } from './associateMembers.js';
 
-const BoardMembers = () => {
-  const [filteredCompanies, setFilteredCompanies] = useState(companiesWithId);
+const AssociateMembers = () => {
+  const [filteredAssociateMembers, setFilteredAssociateMembers] = useState(associateMembersWithId);
   const [filters, setFilters] = useState({
     location: [],
     castingMaterial: []
   });
 
-  const locations = [...new Set(companiesWithId.map(company => company.city))].filter(Boolean);
-  const materials = [...new Set(companiesWithId.map(company => company.castingMaterial))].filter(Boolean);
+  const locations = [...new Set(associateMembersWithId.map(member => member.city))].filter(Boolean);
+  const materials = [...new Set(associateMembersWithId.map(member => member.castingMaterial))].filter(Boolean);
 
   useEffect(() => {
-    const filtered = companiesWithId.filter(company => {
-      const locationMatch = filters.location.length === 0 || filters.location.includes(company.city);
-      const materialMatch = filters.castingMaterial.length === 0 || filters.castingMaterial.includes(company.castingMaterial);
+    const filtered = associateMembersWithId.filter(member => {
+      const locationMatch = filters.location.length === 0 || filters.location.includes(member.city);
+      const materialMatch = filters.castingMaterial.length === 0 || filters.castingMaterial.includes(member.castingMaterial);
       return locationMatch && materialMatch;
     });
-    setFilteredCompanies(filtered);
+    setFilteredAssociateMembers(filtered);
   }, [filters]);
 
   const handleFilterChange = (type, value) => {
@@ -34,7 +34,7 @@ const BoardMembers = () => {
   return (
     <div className="bg-lightGray min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-darkGray mb-8 text-center">Board Members</h1>
+        <h1 className="md:text-6xl text-4xl font-bold text-darkGray mb-8 text-center">Associate Members</h1>
         
         <div className="mb-8 flex flex-wrap justify-center gap-4">
           <div className="w-full md:px-2">
@@ -76,9 +76,9 @@ const BoardMembers = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCompanies.map((company, index) => (
+          {filteredAssociateMembers.map((member, index) => (
             <motion.div
-              key={company.id}
+              key={member.id}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -87,19 +87,19 @@ const BoardMembers = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-darkGray mb-2 flex items-center">
                   <Building className="text-orange mr-2" size={24} />
-                  {company.companyName}
+                  {member.associateMemberName}
                 </h3>
                 <p className="text-gray-600 mb-4 flex items-center">
                   <MapPin className="text-orange mr-2" size={18} />
-                  {company.city || "Location not specified"}
+                  {member.city || "Location not specified"}
                 </p>
                 <p className="text-gray-600 mb-4 flex items-center">
                   <Hammer className="text-orange mr-2" size={18} />
-                  {company.castingMaterial}
+                  {member.castingMaterial}
                 </p>
                 <p className="text-gray-600 flex items-center">
                   <Phone className="text-orange mr-2" size={18} />
-                  {company.phone}
+                  {member.phone}
                 </p>
               </div>
             </motion.div>
@@ -110,4 +110,4 @@ const BoardMembers = () => {
   );
 };
 
-export default BoardMembers;
+export default AssociateMembers;

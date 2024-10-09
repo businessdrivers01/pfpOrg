@@ -10,15 +10,15 @@ const AnimatedTextSlides = ({ title, description, slides, reverse, className, se
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
     };
     const sliderSettings = { ...defaultSettings, ...settings };
     return (
-        <div className={`mx-auto justify-end px-4 md:flex ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} ${className}`}>
+        <div className={`mx-auto justify-end items-center px-4 md:flex ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} ${className}`}>
             {/* Text Section */}
             <div className={`md:w-1/2 md:pr-8 mb-8 md:mb-0 ${reverse ? 'md:ml-8' : ''}`}>
                 {/* Heading */}
-                <h2 className="text-darkGray text-3xl md:text-6xl font-bold text-center md:text-left">
+                <h2 className="text-orange text-3xl md:text-5xl font-bold text-center md:text-left">
                     {title}
                 </h2>
 
@@ -41,7 +41,7 @@ const AnimatedTextSlides = ({ title, description, slides, reverse, className, se
                             loading="lazy"
                             src={slide.image}
                             alt={slide.alt}
-                            className="md:w-[20vw] rounded-xl"
+                            className=" md:w-[20vw] rounded-xl"
                         />
                     </div>
                 ))}
