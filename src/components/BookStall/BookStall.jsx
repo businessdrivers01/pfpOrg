@@ -6,6 +6,8 @@ import stallsLayout from "../../assets/BookStall/stalls-layout.jpg"
 
 export default function BookStall() {
   const [isLayoutOpen, setIsLayoutOpen] = useState(false)
+  const [popup, setPopup] = useState({ message: '', show: false, success: false })
+
   const handleLayoutOpen = () => {
     setIsLayoutOpen(!isLayoutOpen)
   }
@@ -27,9 +29,41 @@ export default function BookStall() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Here you would typically send the data to your server
+
+    // Send form data to Formspree
+    const formUrl = 'https://formspree.io/f/YOUR_FORM_ID' // Replace with your Formspree form ID
+    const formPayload = new FormData()
+    Object.keys(formData).forEach(key => formPayload.append(key, formData[key]))
+
+    fetch(formUrl, {
+      method: 'POST',
+      body: formPayload,
+      headers: {
+        'Accept': 'application/json',
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setPopup({ message: 'Details submitted successfully!', show: true, success: true })
+          setFormData({
+            companyName: '',
+            address: '',
+            contactPerson: '',
+            designation: '',
+            cell: '',
+            email: '',
+            stallCategory: '',
+            stallNo: '',
+          })
+        } else {
+          setPopup({ message: 'Form submission failed. Please try again later.', show: true, success: false })
+        }
+      })
+      .catch(() => {
+        setPopup({ message: 'An error occurred. Please try again later.', show: true, success: false })
+      })
   }
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -160,6 +194,7 @@ export default function BookStall() {
               />
             </div>
           </div>
+
           <div className="bg-white p-4 rounded-md shadow">
             <h2 className="text-lg font-semibold text-darkGray mb-2">For Stall Reservation & Price Confirmation Please Contact</h2>
             <div className="flex flex-col space-y-2">
@@ -171,9 +206,9 @@ export default function BookStall() {
                 <Phone className="text-orange mr-2" size={18} />
                 <span>+92-303-7848558</span>
               </div>
-
             </div>
           </div>
+
           <div className="bg-white p-4 rounded-md shadow">
             <h2 className="text-lg font-semibold text-darkGray mb-2">Mode of Payment</h2>
             <p className="text-sm">
@@ -188,63 +223,34 @@ export default function BookStall() {
           </div>
 
           <div className="flex justify-center">
-            <MyButton
-              className="md:px-8 text-xl font-bold"
-              children='Book Now' type='submit' />
+            <MyButton className="md:px-8 text-xl">Book Now</MyButton>
           </div>
 
-        </form>
-        <div className="bg-darkGray text-white p-6 md:p-8">
-          <h2 className="text-xl font-semibold mb-4">Secretariat - Pakistan Foundry Association</h2>
-          <div className="flex flex-col space-y-2">
-            <div className="flex items-start">
-              <MapPin className="text-orange mr-2 mt-1 flex-shrink-0" size={18} />
-              <span>14 KM G.T, near Orange Line Station Dera Gujran, Lahore, Pakistan</span>
-            </div>
-            <div className="flex items-center">
-              <Phone className="text-orange mr-2" size={18} />
-              <span>+92-42-36550679</span>
-            </div>
-            <div className="flex items-center">
-              <Phone className="text-orange mr-2" size={18} />
-              <span>+92-322-8487873</span>
-            </div>
-            <div className="flex items-center">
-              <Mail className="text-orange mr-2" size={18} />
-              <span>pakistanfoundryassociation <br /> @gmail.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="text-orange mr-2" size={18} />
-              <span>www.pfa.org.pk</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {isLayoutOpen ? (
-        <>
-          <img
-            className='w-full md:w-[80vw] my-4 md:px-4 mx-auto'
-            src={stallsLayout} alt="Stalls Layout" />
           <div className="flex justify-center">
-            <MyButton
-              onClick={handleLayoutOpen}
-              children='Hide Stall Layout Plan'
-              className={"my-4 hover:scale-105 duration-300"} />
+            <button type="button" onClick={handleLayoutOpen} className="underline text-orange text-base font-bold mt-4">
+              {isLayoutOpen ? "Hide" : "View"} Stalls Layout
+            </button>
           </div>
-        </>
-      ) : (
-        <div className="flex justify-center">
-          <MyButton
-            onClick={handleLayoutOpen}
-            children='View Stall Layout Plan'
-            className={"my-4 hover:scale-105 duration-300"} />
-        </div>)}
 
+          {isLayoutOpen && (
+            <div className="relative mt-4">
+              <img src={stallsLayout} alt="Stalls Layout" className="mx-auto rounded-lg shadow-md" />
+            </div>
+          )}
+        </form>
 
-
-
-
+        {/* Popup logic */}
+        {popup.show && (
+          <div
+            className={`fixed bottom-4 right-4 p-4 rounded-lg shadow-lg text-white ${popup.success ? 'bg-green-500' : 'bg-red-500'
+              }`}>
+            <p>{popup.message}</p>
+            <button onClick={() => setPopup({ ...popup, show: false })} className="underline text-sm mt-2">
+              Close
+            </button>
+          </div>
+        )}
+      </div>
     </motion.div>
   )
 }

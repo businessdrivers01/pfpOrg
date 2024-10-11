@@ -33,7 +33,7 @@ function Contact() {
         </p>
 
         {showPopup ? (
-          <div className="fixed inset-0 flex justify-center items-center bg-lightGray bg-opacity-75">
+          <div className="fixed inset-0 flex justify-center items-center bg-lightGray bg-opacity-70">
             <div className="bg-white p-8 rounded-lg border-orange border-2">
               <h2 className="text-2xl text-orange font-bold mb-2 text-center">Thank You!</h2>
               <p className="text-center text-darkGray mb-4">
