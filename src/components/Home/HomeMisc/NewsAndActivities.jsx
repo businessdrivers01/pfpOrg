@@ -18,7 +18,7 @@ import {
   image15,
   image16,
   image17,
-  image18
+  bdSession
 } from "../../../assets/NewsAndActivities"
 
 const newsData = [
@@ -27,6 +27,12 @@ const newsData = [
     date: "27th July, 2024",
     description: "Mr. Syed Sajid Hussain, Managing Director of Peoples Steel Mills, provided a briefing on world-class technology and molten metal treatment. His insights on advanced practices and opportunities for collaboration were invaluable.",
     images: [image16]
+  },
+  {
+    title: "8th Successful BD Session with Nimir Chemicals Ltd.",
+    date: "1st July, 2024",
+    description: `PFA held a highly successful BD session with Nimir Chemicals Ltd., focusing on strengthening local manufacturing and reducing reliance on imports.This is another major step forward for the foundry sector and is set to open new avenues for business collaboration, benefiting both our industry and Pakistan’s economy.`,
+    images: [bdSession]
   },
   {
     title: "3rd Business Development Session with DG Cement",

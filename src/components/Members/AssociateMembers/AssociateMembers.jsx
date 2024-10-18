@@ -34,7 +34,7 @@ const AssociateMembers = () => {
   return (
     <div className="bg-lightGray min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="md:text-6xl text-4xl font-bold text-darkGray mb-8 text-center">Associate Members</h1>
+        <h1 className="md:text-6xl text-4xl font-bold text-darkGray mb-8 text-center">All Members</h1>
         
         <div className="mb-8 flex flex-wrap justify-center gap-4">
           <div className="w-full md:px-2">

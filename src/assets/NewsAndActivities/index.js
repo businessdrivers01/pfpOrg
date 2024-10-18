@@ -16,6 +16,7 @@ import image15 from './news15.jpg';
 import image16 from './news16.jpg';
 import image17 from './news17.jpg';
 import image18 from './news18.jpg';
+import bdSession from './bd-session.jpg';
 
 export{
     image1,
@@ -35,5 +36,6 @@ export{
     image15,
     image16,
     image17,
-    image18
+    image18,
+    bdSession
 }

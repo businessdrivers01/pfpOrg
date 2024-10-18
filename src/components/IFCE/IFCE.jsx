@@ -65,7 +65,6 @@ function IFCE() {
         <StatsRepresentation/>
         <ObjectiveOfIFCE />
         <IFCE2025 />
-        <OurHistory />
         <KeyPoints />
         <Benefits />
       </motion.div>
