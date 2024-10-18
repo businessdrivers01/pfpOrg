@@ -9,12 +9,12 @@ import img6 from "../../../assets/BoardOfDirectors/Shafiq Shahid UPD.jpg"
 
 const directors = [
 
+  // { name: "Sikandar Mustafa Khan", image: img5 },
   { name: "Imran Ghani", image: img3 },
-  { name: "Sikandar Mustafa Khan", image: img5 },
-  { name: "Ahmad Hassan", image: img1 },
   { name: "Asim Qadri", image: img2 },
   { name: "Irfan Ahmad", image: img4 },
   { name: "Shafiq Shahid", image: img6 },
+  { name: "Ahmad Hassan", image: img1 },
 ]
 
 const DirectorCard = ({ name, image, index }) => (
@@ -27,7 +27,6 @@ const DirectorCard = ({ name, image, index }) => (
     <div className="w-64 rounded-ful overflow-hidden mb-4 border-4 border-orange shadow-lg">
       <img src={image} alt={name} className="w-full h-full object-cover" />
     </div>
-    <h3 className="text-lg md:text-xl font-semibold text-darkGray mb-1">{name}</h3>
   </motion.div>
 )
 
@@ -43,6 +42,9 @@ function BoardOfDirectors() {
         >
           Board of Directors
         </motion.h2>
+        <div className='flex justify-center'>
+          <img className='w-64 mb-12' src={img5} />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-12">
           {directors.map((director, index) => (
             <DirectorCard key={index} {...director} index={index} />
