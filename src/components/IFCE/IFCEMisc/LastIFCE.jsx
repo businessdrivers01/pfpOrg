@@ -19,6 +19,7 @@ import img12 from "../../../assets/LastIFCE/img12.jpg"
 import img13 from "../../../assets/LastIFCE/img13.jpg"
 import img14 from "../../../assets/LastIFCE/img14.jpg"
 import img15 from "../../../assets/LastIFCE/img15.jpg"
+import { NavLink } from 'react-router-dom';
 
 const images = [
   { image: img1, alt: 'Event Image 1' },
@@ -75,19 +76,23 @@ const LastIFCE = () => {
                   loading="lazy"
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-64 object-cover rounded-xl" 
+                  className="w-full h-64 object-cover rounded-xl"
                 />
               </div>
             ))}
           </Slider>
 
           <div className="text-center">
-            <button
-              className="bg-orange text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-300 mt-4"
-              onClick={toggleGallery}
+            <NavLink
+              to={"/ifce-gallery"}
             >
-              {showAllImages ? 'Hide Gallery' : 'View Gallery'}
-            </button>
+              <button
+                className="bg-orange text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-300 mt-4"
+              >
+                {showAllImages ? 'Hide Gallery' : 'View Gallery'}
+
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
