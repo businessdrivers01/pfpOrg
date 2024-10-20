@@ -36,7 +36,7 @@ const SlidesAndText = ({ title, description, slides, reverse, className, setting
             <div className="md:w-1/2">
                 <Slider  {...sliderSettings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="w-full">
+                        <div key={index}>
                             <img
                                 loading="lazy"
                                 src={slide.image}

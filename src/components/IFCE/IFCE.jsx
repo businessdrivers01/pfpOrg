@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { animationSettings } from '../../constants';
 import StatsRepresentation from './IFCEMisc/StatsRepresentation';
+import LastIFCE from './IFCEMisc/LastIFCE';
 
 function IFCE() {
 
@@ -62,8 +63,9 @@ function IFCE() {
           ))}
         </Slider>
         <ElementsOfIFCE />
-        <StatsRepresentation/>
+        <StatsRepresentation />
         <ObjectiveOfIFCE />
+        <LastIFCE />
         <IFCE2025 />
         <KeyPoints />
         <Benefits />
