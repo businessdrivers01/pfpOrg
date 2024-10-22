@@ -1,26 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ZoomIn, ZoomOut } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ZoomIn, ZoomOut, ChevronLeft, ChevronRight } from 'lucide-react';
 
-import img1 from "../../assets/LastIFCE/img1.jpg"
-import img2 from "../../assets/LastIFCE/img2.jpg"
-import img3 from "../../assets/LastIFCE/img3.jpg"
-import img4 from "../../assets/LastIFCE/img4.jpg"
-import img5 from "../../assets/LastIFCE/img5.jpg"
-import img6 from "../../assets/LastIFCE/img6.jpg"
-import img7 from "../../assets/LastIFCE/img7.jpg"
-import img8 from "../../assets/LastIFCE/img8.jpg"
-import img9 from "../../assets/LastIFCE/img9.jpg"
-import img10 from "../../assets/LastIFCE/img10.jpg"
-import img11 from "../../assets/LastIFCE/img11.jpg"
-import img12 from "../../assets/LastIFCE/img12.jpg"
-import img13 from "../../assets/LastIFCE/img13.jpg"
-import img14 from "../../assets/LastIFCE/img14.jpg"
-import img15 from "../../assets/LastIFCE/img15.jpg"
-
-const images = [
-    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15
-];
+const images = Object.values(import.meta.glob('../../assets/LastIFCE/*.jpg', { eager: true })).map(module => module.default);
 
 const GalleryOfIFCE = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -31,6 +13,14 @@ const GalleryOfIFCE = () => {
 
     const closeImage = () => {
         setSelectedImage(null);
+    };
+
+    const nextImage = () => {
+        setSelectedImage((prev) => (prev + 1) % images.length);
+    };
+
+    const prevImage = () => {
+        setSelectedImage((prev) => (prev - 1 + images.length) % images.length);
     };
 
     return (
@@ -71,32 +61,46 @@ const GalleryOfIFCE = () => {
                     ))}
                 </motion.div>
 
-                {selectedImage !== null && (
-                    <motion.div
-                        className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
-                        <motion.img
-                            src={images[selectedImage]}
-                            alt={`IFCE Gallery Image ${selectedImage + 1}`}
-                            className="max-w-full max-h-full object-contain"
-                            initial={{ scale: 0.8 }}
-                            animate={{ scale: 1 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                        />
-                        <button
-                            className="absolute top-4 right-4 text-white hover:text-orange transition-colors duration-300"
-                            onClick={closeImage}
+                <AnimatePresence>
+                    {selectedImage !== null && (
+                        <motion.div
+                            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                         >
-                            <ZoomOut size={32} />
-                        </button>
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg">
-                            {selectedImage + 1} / {images.length}
-                        </div>
-                    </motion.div>
-                )}
+                            <motion.img
+                                src={images[selectedImage]}
+                                alt={`IFCE Gallery Image ${selectedImage + 1}`}
+                                className="max-w-full max-h-full object-contain"
+                                initial={{ scale: 0.8 }}
+                                animate={{ scale: 1 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                            />
+                            <button
+                                className="absolute top-4 right-4 text-white hover:text-orange transition-colors duration-300"
+                                onClick={closeImage}
+                            >
+                                <ZoomOut size={32} />
+                            </button>
+                            <button
+                                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-orange transition-colors duration-300"
+                                onClick={prevImage}
+                            >
+                                <ChevronLeft size={32} />
+                            </button>
+                            <button
+                                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-orange transition-colors duration-300"
+                                onClick={nextImage}
+                            >
+                                <ChevronRight size={32} />
+                            </button>
+                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg">
+                                {selectedImage + 1} / {images.length}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
     );
