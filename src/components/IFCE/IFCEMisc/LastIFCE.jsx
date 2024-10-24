@@ -4,7 +4,8 @@ import Slider from 'react-slick';
 import { NavLink } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img32 from "../../../assets/LastIFCE/img32.jpg"
+import img32 from "../../../assets/KeyPoints/slide1.jpg"
+
 
 const images = Object.values(import.meta.glob('../../../assets/LastIFCE/*.jpg', { eager: true })).map(module => module.default);
 

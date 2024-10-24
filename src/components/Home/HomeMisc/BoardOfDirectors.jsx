@@ -32,7 +32,7 @@ const DirectorCard = ({ name, image, index }) => (
 
 function BoardOfDirectors() {
   return (
-    <div className="bg-lightGray pb-6 px-4 sm:px-6 lg:px-8">
+    <div className="bg-lightGray py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
