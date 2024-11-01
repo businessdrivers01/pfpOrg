@@ -5,6 +5,7 @@ import { createBrowserRouter, Route, RouterProvider, ScrollRestoration } from 'r
 import { BookStall, Contact, Home, IFCE, Layout } from './components/index.js';
 import Members from './components/Members/Members.jsx';
 import GalleryOfIFCE from './components/GalleryOfIFCE/GalleryOfIFCE.jsx';
+import Blogs from './components/Blogs/Blogs.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: 'board-members', element: <Members /> },
       { path: 'book-stall', element: <BookStall /> },
       { path: 'ifce-gallery', element: <GalleryOfIFCE /> },
+      { path: 'blogs', element: <Blogs /> },
     ],
   },
 ]);

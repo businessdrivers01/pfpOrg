@@ -14,6 +14,7 @@ function Navbar() {
         { id: 3, title: "Members", route: "/board-members" },
         { id: 4, title: "Contact", route: "/contact" },
         { id: 5, title: "Book a Stall", route: "/book-stall" },
+        { id: 5, title: "Blogs", route: "/blogs" },
     ];
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
