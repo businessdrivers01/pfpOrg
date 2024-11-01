@@ -23,16 +23,16 @@ import {
 
 const newsData = [
   {
-    title: "Meeting with Managing Director of Peoples Steel Mills Limited",
-    date: "27th July, 2024",
-    description: "Mr. Syed Sajid Hussain, Managing Director of Peoples Steel Mills, provided a briefing on world-class technology and molten metal treatment. His insights on advanced practices and opportunities for collaboration were invaluable.",
-    images: [image16]
+    title: "1st Business Development Session with Ittehad Chemicals Limited",
+    date: "10th May, 2024",
+    description: "PFA organized an engaging session between PFA members and the Procurement and Technical team of Ittehad Chemicals Limited. Ittehad Chemicals provided a roadmap to develop imported castings locally.",
+    images: [image8]
   },
   {
-    title: "8th Successful BD Session with Nimir Chemicals Ltd.",
-    date: "11th October, 2024",
-    description: "PFA held a highly successful BD session with Nimir Chemicals Ltd., focusing on strengthening local manufacturing and reducing reliance on imports. This is another major step forward for the foundry sector and is set to open new avenues for business collaboration, benefiting both our industry and Pakistan’s economy.",
-    images: [bdSession]
+    title: "2nd Business Development Session with Dandot Cement",
+    date: "31st May, 2024",
+    description: "PFA held a productive session with Dandot Cement, focusing on reducing imports and boosting local manufacturing, supporting the 'Made in Pakistan' movement.",
+    images: [image10]
   },
   {
     title: "3rd Business Development Session with DG Cement",
@@ -53,36 +53,19 @@ const newsData = [
     images: [image14]
   },
   {
-    title: "1st Business Development Session with Ittehad Chemicals Limited",
-    date: "10th May, 2024",
-    description: "PFA organized an engaging session between PFA members and the Procurement and Technical team of Ittehad Chemicals Limited. Ittehad Chemicals provided a roadmap to develop imported castings locally.",
-    images: [image8]
+    title: "6th Business Development Session with Peoples Steel Mills Limited",
+    date: "27th July, 2024",
+    description: "Mr. Syed Sajid Hussain, Managing Director of Peoples Steel Mills, provided a briefing on world-class technology and molten metal treatment. His insights on advanced practices and opportunities for collaboration were invaluable.",
+    images: [image16]
   },
   {
-    title: "2nd Business Development Session with Dandot Cement",
-    date: "31st May, 2024",
-    description: "PFA held a productive session with Dandot Cement, focusing on reducing imports and boosting local manufacturing, supporting the 'Made in Pakistan' movement.",
-    images: [image10]
-  },
-  {
-    title: "Technical Session by Çukurova Kimya Endüstrisi A.Ş",
-    date: "11th December, 2023",
-    description: "Çukurova Kimya organized a technical session at Pearl Continental Hotel, Lahore. More than 60 Foundries attended this session. Çukurova Kimya's technical team provided guidance on using Coatings, various Phenolic Resins, and Exothermic Feeder Sleeves. They also addressed multiple queries and problems faced by foundries.",
-    images: [image4]
-  },
-  {
-    title: "Meeting of PFA team with PUM experts",
-    date: "30th November, 2023",
-    description: "Meeting of PFA team along with PUM experts from Netherlands with Gujranwala Members at PFA Regional Office – Gujranwala.",
-    images: [image1]
-  },
-  {
-    title: "Meeting with Canadian Trade Commissioner",
-    date: "", // No date provided
-    description: "PFA Welcomed Canadian Trade Commissioner Mr. Zohaib Khan to the PFA! His visit provided insightful discussions on fostering trade relations and strengthening ties between our industries. We look forward to future collaborations and opportunities for growth.",
-    images: [image6]
+    title: "8th Business Development Session with Nimir Chemicals Ltd.",
+    date: "11th October, 2024",
+    description: "PFA held a highly successful BD session with Nimir Chemicals Ltd., focusing on strengthening local manufacturing and reducing reliance on imports. This is another major step forward for the foundry sector and is set to open new avenues for business collaboration, benefiting both our industry and Pakistan’s economy.",
+    images: [bdSession]
   }
 ];
+
 
 
 

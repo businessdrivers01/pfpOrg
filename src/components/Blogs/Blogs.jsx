@@ -2,35 +2,37 @@ import React from 'react';
 import { motion } from "framer-motion"
 import { blogs } from './blogs';
 
-const Blog = ({ title, date, bannerImage, content, contentImage }) => {
-    const formattedDate = new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    });
+const Blog = ({ title,  bannerImage, content}) => {
+    
 
     const currentDate = new Date();
     const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
     const currentYear = currentDate.getFullYear();
 
+    // Function to parse content and render headings and paragraphs
+    const parseContent = (text) => {
+        return text.split('\n').map((line, index) => {
+            // Check if the line starts with '#' for heading
+            if (line.startsWith('# ')) {
+                return <h3 key={index} className="text-orange font-bold text-xl mt-8 mb-2">{line.slice(2)}</h3>; // Remove '# ' and make it a heading
+            }
+            return <p key={index} className="mb-2">{line}</p>; // Regular paragraph
+        });
+    };
+
     return (
         <article className="bg-white rounded-lg shadow-2xl overflow-hidden mb-8">
             <img loading='lazy' src={bannerImage} alt={title} className="w-full h-64 object-cover" />
             <div className="p-6">
-                <h2 className="text-2xl font-bold text-darkGray mb-2">
+                <h2 className="text-2xl font-bold text-orange mb-2">
                     {title} <span className="text-sm font-normal text-gray-500">(Updated {currentMonth} {currentYear})</span>
                 </h2>
-                <p className="text-darkGray mb-4">{formattedDate}</p>
-                <div className="prose max-w-none">
-                    <p className="mb-4">{content.substring(0, content.indexOf('.') + 1)}</p>
-                    <img loading='lazy' src={contentImage} alt="Related content" className="w-full h-48 object-cover rounded-md mb-4" />
-                    <p className='text-darkGray'>{content.substring(content.indexOf('.') + 1)}</p>
-                </div>
+
+                {parseContent(content)} {/* Call the parseContent function */}
             </div>
         </article>
     );
 };
-
 
 const Blogs = () => {
     return (
@@ -45,9 +47,9 @@ const Blogs = () => {
                     Blogs
                 </h1>
                 <p className="text-darkGray text-lg md:text-xl text-center mb-16">
-                    Latest trends and insights in the field of IT and technology.
+                    Latest blogs of IFCE.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 gap-y-8 md:mx-52">
                     {blogs.map((blog) => (
                         <Blog key={blog.id} {...blog} />
                     ))}
