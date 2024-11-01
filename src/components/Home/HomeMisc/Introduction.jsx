@@ -1,4 +1,4 @@
-import banner from "../../../assets/Home/banner.jpg"
+import banner from "../../../assets/banners/banner5.jpg"
 
 
 const Introduction = () => {

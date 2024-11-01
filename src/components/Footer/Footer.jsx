@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Phone, Mail, MapPin, Globe } from 'lucide-react'
-import logo from "../../assets/logos/logo1.png"
+import logo from "../../assets/logos/logo3.png"
 
 export default function Footer() {
   const navItems = [
@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Logo and About */}
           <div className="space-y-4">
             <NavLink to="/" className="inline-block">
-              <img src={logo} alt="IFCE Logo" className="w-32" />
+              <img src={logo} alt="IFCE Logo" className="w-36" />
             </NavLink>
             <p className="text-sm text-lightGray">
               9th International Foundry Congress & Exhibition, PC Hotel, Lahore, Pakistan

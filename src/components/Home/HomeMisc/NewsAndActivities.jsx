@@ -30,37 +30,37 @@ const newsData = [
   },
   {
     title: "8th Successful BD Session with Nimir Chemicals Ltd.",
-    date: "1st July, 2024",
-    description: `PFA held a highly successful BD session with Nimir Chemicals Ltd., focusing on strengthening local manufacturing and reducing reliance on imports.This is another major step forward for the foundry sector and is set to open new avenues for business collaboration, benefiting both our industry and Pakistan’s economy.`,
+    date: "11th October, 2024",
+    description: "PFA held a highly successful BD session with Nimir Chemicals Ltd., focusing on strengthening local manufacturing and reducing reliance on imports. This is another major step forward for the foundry sector and is set to open new avenues for business collaboration, benefiting both our industry and Pakistan’s economy.",
     images: [bdSession]
   },
   {
     title: "3rd Business Development Session with DG Cement",
-    date: "27th June, 2024",
+    date: "28th June, 2024",
     description: "PFA conducted a successful session with DG Cement, emphasizing the importance of reducing imports and enhancing local manufacturing, supporting Pakistan's economy.",
     images: [image11]
   },
   {
     title: "4th Business Development Session with Maple Leaf Cement",
-    date: "27th June, 2024",
+    date: "12th July, 2024",
     description: "PFA hosted a session with Maple Leaf Cement, focusing on reducing imports and enhancing local manufacturing, supporting the 'Made in Pakistan' initiative.",
     images: [image13]
   },
   {
     title: "5th Business Development Session with Pioneer Cement",
-    date: "27th June, 2024",
+    date: "26th July, 2024",
     description: "PFA hosted a session with Pioneer Cement, focusing on reducing imports and boosting local manufacturing, marking a significant leap forward for the foundry sector.",
     images: [image14]
   },
   {
     title: "1st Business Development Session with Ittehad Chemicals Limited",
-    date: "11th May, 2024",
+    date: "10th May, 2024",
     description: "PFA organized an engaging session between PFA members and the Procurement and Technical team of Ittehad Chemicals Limited. Ittehad Chemicals provided a roadmap to develop imported castings locally.",
     images: [image8]
   },
   {
     title: "2nd Business Development Session with Dandot Cement",
-    date: "3rd May, 2024",
+    date: "31st May, 2024",
     description: "PFA held a productive session with Dandot Cement, focusing on reducing imports and boosting local manufacturing, supporting the 'Made in Pakistan' movement.",
     images: [image10]
   },
@@ -83,6 +83,7 @@ const newsData = [
     images: [image6]
   }
 ];
+
 
 
 

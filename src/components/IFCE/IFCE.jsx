@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Benefits, ElementsOfIFCE, IFCE2025, KeyPoints, ObjectiveOfIFCE, OurHistory } from ".."
-import banner1 from "../../assets/banners/banner1.jpg"
-import banner2 from "../../assets/banners/banner2.jpg"
+import banner2 from "../../assets/Home/banner.jpg"
 import banner3 from "../../assets/banners/banner3.jpg"
+import banner4 from "../../assets/banners/banner4.jpg"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,16 +27,16 @@ function IFCE() {
 
   const slides = [
     {
-      image: banner1,
-      alt: 'Image 1',
-    },
-    {
       image: banner2,
       alt: 'Image 2',
     },
     {
       image: banner3,
       alt: 'Image 3',
+    },
+    {
+      image: banner4,
+      alt: 'Image 4',
     },
 
   ]
