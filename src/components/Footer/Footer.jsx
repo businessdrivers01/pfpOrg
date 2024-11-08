@@ -87,7 +87,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Made with <span className='text-red-300 text-lg'>❤</span> by Chapter00 Pakistan
+            Made with <span className='text-red-300 text-lg'>❤</span> by Chapter001 Pakistan
           </a>
           <p className="text-sm text-lightGray mt-4 md:mt-0">
             © {new Date().getFullYear()} PFA. All rights reserved.
