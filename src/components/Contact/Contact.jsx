@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { animationSettings } from '../../constants';
 
 function Contact() {
-  const [state, handleSubmit] = useForm("YOUR_FORMSPREE_FORM_ID");
+  const [state, handleSubmit] = useForm("xvgowgjp");
   const [submitting, setSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -59,7 +59,7 @@ function Contact() {
                 placeholder="What's your good name?"
                 type="text"
                 name="name"
-                className="w-full px-3 py-2 text-orange outline-none bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
+                className="w-full px-3 py-2 text-darkGray outline-none bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
                 required
               />
             </div>
@@ -70,7 +70,7 @@ function Contact() {
                 id="email"
                 type="email"
                 name="email"
-                className="w-full px-3 py-2 text-orange outline-none bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
+                className="w-full px-3 py-2 text-darkGray outline-none bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300"
                 required
               />
               <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -82,7 +82,7 @@ function Contact() {
                 name="query"
                 placeholder='Please write your message here...'
                 rows="4"
-                className="w-full px-3 py-2 text-orange bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300 outline-none"
+                className="w-full px-3 py-2 text-darkGray bg-lightGray rounded-lg focus:ring-2 focus:ring-orange focus:bg-white transition duration-300 outline-none"
                 required
               ></textarea>
               <ValidationError prefix="Query" field="query" errors={state.errors} />
