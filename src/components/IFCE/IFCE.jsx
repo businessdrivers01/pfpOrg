@@ -4,6 +4,14 @@ import { Benefits, ElementsOfIFCE, IFCE2025, KeyPoints, ObjectiveOfIFCE, OurHist
 import banner2 from "../../assets/Home/banner.jpg"
 import banner3 from "../../assets/banners/banner3.jpg"
 import banner4 from "../../assets/banners/banner4.jpg"
+
+import session1 from "/public/ifce-sessions/1.jpg"
+import session2 from "/public/ifce-sessions/2.jpg"
+import session3 from "/public/ifce-sessions/3.jpg"
+import session4 from "/public/ifce-sessions/4.jpg"
+import session5 from "/public/ifce-sessions/5.jpg"
+import session6 from "/public/ifce-sessions/6.jpg"
+
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,7 +22,6 @@ import LastIFCE from './IFCEMisc/LastIFCE';
 function IFCE() {
 
   const defaultSettings = {
-    dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -24,6 +31,33 @@ function IFCE() {
     pauseOnHover: false,
   };
 
+
+  const sessionSettings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768, // Adjusts for screen widths <= 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // Adjusts for screen widths <= 1024px
+        settings: {
+          slidesToShow: 2, // Optional for medium screens
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  
 
   const slides = [
     {
@@ -40,14 +74,39 @@ function IFCE() {
     },
 
   ]
+  const sessionSlides = [
+    {
+      image: session1,
+      alt: 'Session 1',
+    },
+    {
+      image: session2,
+      alt: 'Session 2',
+    },
+    {
+      image: session3,
+      alt: 'Session 3',
+    },
+    {
+      image: session4,
+      alt: 'Session 4',
+    },
+    {
+      image: session5,
+      alt: 'Session 5',
+    },
+    {
+      image: session6,
+      alt: 'Session 6',
+    },
+
+  ]
 
   return (
     <main className='overflow-x-hidden'>
       <motion.div
         {...animationSettings}
         className="">
-
-
 
         <Slider  {...defaultSettings}>
           {slides.map((slide, index) => (
@@ -62,6 +121,27 @@ function IFCE() {
             </div>
           ))}
         </Slider>
+
+
+<div
+className='my-8'
+>
+        <Slider  {...sessionSettings}>
+          {sessionSlides.map((slide, index) => (
+            <div
+              key={index} >
+              <img
+                loading="lazy"
+                src={slide.image}
+                alt={slide.alt}
+                className="h-96 lg:rounded-xl"
+              />
+            </div>
+          ))}
+        </Slider>
+
+</div>
+
         <ElementsOfIFCE />
         <StatsRepresentation />
         <ObjectiveOfIFCE />
