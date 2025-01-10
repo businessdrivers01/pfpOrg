@@ -5,12 +5,12 @@ import banner2 from "../../assets/Home/banner.jpg"
 import banner3 from "../../assets/banners/banner3.jpg"
 import banner4 from "../../assets/banners/banner4.jpg"
 
-import session1 from "/public/ifce-sessions/1.jpg"
-import session2 from "/public/ifce-sessions/2.jpg"
-import session3 from "/public/ifce-sessions/3.jpg"
-import session4 from "/public/ifce-sessions/4.jpg"
-import session5 from "/public/ifce-sessions/5.jpg"
-import session6 from "/public/ifce-sessions/6.jpg"
+import session1 from "/ifce-sessions/1.jpg"
+import session2 from "/ifce-sessions/2.jpg"
+import session3 from "/ifce-sessions/3.jpg"
+import session4 from "/ifce-sessions/4.jpg"
+import session5 from "/ifce-sessions/5.jpg"
+import session6 from "/ifce-sessions/6.jpg"
 
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
