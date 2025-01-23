@@ -26,6 +26,7 @@ const associateMembers = [
     { associateMemberName: "HAFEEZ FOUNDARY WORKS", city: "Gujranwala", castingMaterial: "Cast Iron", phone: "0300-0505123" },
     { associateMemberName: "Inter Link Enterprises", city: "Lahore", castingMaterial: "Cast Iron", phone: "0321-8409795" },
     { associateMemberName: "International Fabrication Company", city: "Lahore", castingMaterial: "Mild Steel, Cast Iron", phone: "+92-300-8451483" },
+    { associateMemberName: "Karachi Shipyard & Engineering Works Ltd.", city: "Karachi", castingMaterial: "Cast Iron, Steel Alloys", phone: "+92 21 9921 4045 to 64 [20 Lines]" },
     { associateMemberName: "KHAMSA FOUNDRY", city: "Gujranwala", castingMaterial: "Mild Steel, Cast Iron", phone: "0331-5128512" },
     { associateMemberName: "Lahore Castings", city: "Lahore", castingMaterial: "Cast Iron, Mild Steel", phone: "03004212184" },
     { associateMemberName: "Liaqat Trading Coproration", city: "Lahore", castingMaterial: "Material Supplier", phone: "0300-8484302" },

@@ -4,6 +4,7 @@ import { Benefits, ElementsOfIFCE, IFCE2025, KeyPoints, ObjectiveOfIFCE, OurHist
 import banner2 from "../../assets/Home/banner.jpg"
 import banner3 from "../../assets/banners/banner3.jpg"
 import banner4 from "../../assets/banners/banner4.jpg"
+import banner7 from "../../assets/banners/banner7.jpg"
 
 import session1 from "/ifce-sessions/1.jpg"
 import session2 from "/ifce-sessions/2.jpg"
@@ -71,6 +72,10 @@ function IFCE() {
     {
       image: banner4,
       alt: 'Image 4',
+    },
+    {
+      image: banner7,
+      alt: 'Image 7',
     },
 
   ]
